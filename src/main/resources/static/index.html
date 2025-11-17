@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Calculator</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card" role="main" aria-labelledby="title">
+    <h1 id="title">Simple Calculator</h1>
+
+    <label for="num1">Number 1</label>
+    <input id="num1" type="number" step="any" placeholder="e.g. 10" required>
+
+    <label for="num2">Number 2</label>
+    <input id="num2" type="number" step="any" placeholder="e.g. 5" required>
+
+    <label for="op">Operation</label>
+    <select id="op" aria-label="operation">
+        <option value="+">Addition ( + )</option>
+        <option value="-">Subtraction ( - )</option>
+        <option value="*">Multiplication ( * )</option>
+        <option value="/">Division ( / )</option>
+        <option value="%">Modulo ( % )</option>
+    </select>
+
+    <button id="btn">Calculate</button>
+    <div id="status" class="small">Sends JSON to <code>/api/calculator/calculate</code></div>
+
+    <div id="out"></div>
+</div>
+
+<!-- External JS -->
+<script src="script.js"></script>
+</body>
+</html>
